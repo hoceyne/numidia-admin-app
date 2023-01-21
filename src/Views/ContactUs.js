@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 
 // components
 
-
-export default function Landing() {
-	return (
-		<>
-		</>
-	);
+export default function ContactUs() {
+	return <></>;
 }
