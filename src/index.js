@@ -22,7 +22,7 @@ root.render(
 	<BrowserRouter>
 		<Routes>
 			<Route path="/about.us" exact element={<AboutUs />} />
-			<Route path="/Contact.us" exact element={<ContactUs />} />
+			<Route path="/contact.us" exact element={<ContactUs />} />
 			<Route path="/profile" exact element={<Profile />} />
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/register" exact element={<Register />} />
