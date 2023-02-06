@@ -1,157 +1,64 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { Link, useNavigate } from "react-router-dom";
+import Sidebar from "../../Components/Sidebars/Sidebar";
+import AdminNavbar from "../../Components/Navbars/AdminNavbar";
+import CardStudents from "../../Components/Cards/CardStudents";
+import FooterAdmin from "../../Components/Footers/FooterAdmin";
+import HeaderStats from "../../Components/Headers/HeaderStats";
 
 // components
 
 export default function Students() {
-	const [students, setStudents] = React.useState([]);
-	const [color, setColor] = React.useState("light");
-	const getStudents = async () => {
-		let url = process.env.API_URL + "/students/";
-		let options = {
-			method: "get",
-			url: url,
-			headers: {
-				Authorization: "Bearer " + token,
-				Accept: "Application/json",
-			},
-		};
-		let response = await axios(options);
-		setStudents(response.data);
-	};
-	return (
-		<>
-			<div className="flex flex-wrap mt-4">
-				<div className="w-full mb-12 px-4">
-					<div
-						className={
-							"relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded " +
-							(color === "light"
-								? "bg-white"
-								: "bg-lightBlue-900 text-white")
-						}
-					>
-						<div className="rounded-t mb-0 px-4 py-3 border-0">
-							<div className="flex flex-wrap items-center">
-								<div className="relative w-full px-4 max-w-full flex-grow flex-1">
-									<h3
-										className={
-											"font-semibold text-lg " +
-											(color === "light"
-												? "text-blueGray-700"
-												: "text-white")
-										}
-									>
-										Card Tables
-									</h3>
-								</div>
-							</div>
-						</div>
-						<div className="block w-full overflow-x-auto">
-							<table className="items-center w-full bg-transparent border-collapse">
-								<thead>
-									<tr>
-										<th
-											className={
-												"px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-												(color === "light"
-													? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-													: "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-											}
-										>
-											students
-										</th>
-										<th
-											className={
-												"px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-												(color === "light"
-													? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-													: "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-											}
-										>
-											Email
-										</th>
-										<th
-											className={
-												"px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-												(color === "light"
-													? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-													: "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-											}
-										>
-											Role
-										</th>
-										<th
-											className={
-												"px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-												(color === "light"
-													? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-													: "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-											}
-										>
-											Completion
-										</th>
-										<th
-											className={
-												"px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-												(color === "light"
-													? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-													: "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-											}
-										></th>
-									</tr>
-								</thead>
-								<tbody>
-									{students.data.map((student, id) => {
-										return (
-											<tr>
-												<th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-													<img
-														src={student.profile_picture_src}
-														className="h-12 w-12 bg-white rounded-full border"
-														alt="..."
-													></img>{" "}
-													<span
-														className={
-															"ml-3 font-bold " +
-															+(color === "light"
-																? "text-blueGray-600"
-																: "text-white")
-														}
-													>
-														{student.name}
-													</span>
-												</th>
-												<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-													{student.email}
-												</td>
-												<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-													{student.role}
-												</td>
-												<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-													<div className="flex items-center">
-														<span className="mr-2">60%</span>
-														<div className="relative w-full">
-															<div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-																<div
-																	style={{ width: "60%" }}
-																	className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-																></div>
-															</div>
-														</div>
-													</div>
-												</td>
-												<td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-													edit delete
-												</td>
-											</tr>
-										);
-									})}
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+    const [students, setStudents] = React.useState([]);
+    const token = window.sessionStorage.getItem("token");
+    const url = process.env.REACT_APP_API_URL;
+    const role = window.sessionStorage.getItem("role");
+    const navigate = useNavigate();
+
+    const getStudents = async () => {
+        let options = {
+            method: "get",
+            url: url+ "/admin/students/",
+            params: {
+				role: role
+			  },
+            headers: {
+                Authorization: "Bearer " + token,
+                Accept: "Application/json",
+            },
+        };
+        let response = await axios(options);
+        setStudents(response.data);
+    };
+	useEffect(() => {
+        if (token) {
+            getStudents();
+        }
+    }, []);
+    return (
+        <>
+            <Sidebar />
+            <div className="relative md:ml-64 bg-blueGray-100">
+                <AdminNavbar />
+                {/* Header */}
+                
+                <HeaderStats />
+                <div className="px-4 md:px-10 mx-auto w-full -m-24">
+                    <div className="flex flex-wrap mt-4">
+                        <div className="w-full mb-12 px-4">
+                            <CardStudents
+                                getStudents = {getStudents}
+                                color={"dark"}
+                                title="All Students"
+                                data={students}
+                            />
+                        </div>
+                    </div>
+                    <FooterAdmin />
+                </div>
+            </div>
+        </>
+    );
 }

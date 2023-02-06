@@ -22,7 +22,7 @@ export default function IndexPlans({ departement }) {
 	};
 	return (
 		<>
-			<div className="-mx-4 flex flex-nowrap justify-center overflow-scroll">
+			<div className="-mx-4 flex flex-nowrap justify-center overflow-scroll scrollbar-hide ">
 				{plans.map((plan, id) => {
 					return (
 						<div className="w-full px-4 md:w-1/2 lg:w-1/3">

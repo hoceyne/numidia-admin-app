@@ -7,6 +7,8 @@ import "./index.css";
 
 import Login from "./Views/Auth/Login.js";
 import Register from "./Views/Auth/Register.js";
+import Students from "./Views/Users/Students.js";
+import Teachers from "./Views/Users/Teachers.js";
 import Profile from "./Views/Profile.js";
 import Index from "./Views/Index.js";
 import Error404 from "./Views/Errors/Error404";
@@ -15,7 +17,8 @@ import EmailVerification from "./Views/Auth/EmailVerification";
 import ForgotPassword from "./Views/Auth/ForgotPassword";
 import AboutUs from "./Views/AboutUs.js";
 import ContactUs from "./Views/ContactUs";
-import HandleCallback from "./Views/Auth/HandleCallback";
+import Dashboard from "./Views/Dashboard";
+import Users from "./Views/Users/Users";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,10 +29,13 @@ root.render(
 			<Route path="/profile" exact element={<Profile />} />
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/register" exact element={<Register />} />
+			<Route path="/dashboard" exact element={<Dashboard />} />
+			<Route path="/teachers" exact element={<Teachers />} />
+			<Route path="/students" exact element={<Students />} />
+			<Route path="/users" exact element={<Users />} />
 			<Route path="/forgot.password" exact element={<ForgotPassword />} />
 
 
-			<Route path="/auth/:driver/callback" element={<HandleCallback />}/>
 			<Route
 				path="/email.resent.code"
 				exact
@@ -40,6 +46,8 @@ root.render(
 
 			{/* Error pages */}
 			<Route path="/404" exact element={<Error404 />} />
+			<Route path="/500" exact element={<Error404 />} />
+			<Route path="/401" exact element={<Error404 />} />
 
 			{/* Page Not Found */}
 			<Route path="*" element={<Navigate to="/404" />} />

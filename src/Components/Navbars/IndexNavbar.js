@@ -12,7 +12,7 @@ export default function Navbar(props) {
 					<div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
 						<Link
 							to="/"
-							className="text-blueGray-700 text-xl font-bold leading-relaxed flex items-center mr-4 py-2 whitespace-nowrap capitalize cursor-pointer"
+							className="text-slate-700 text-xl font-bold leading-relaxed flex items-center mr-4 py-2 whitespace-nowrap capitalize cursor-pointer"
 						>
 							<img 
 							className="w-10 h-auto shadow hover:shadow-lg mr-2 scale-125"
@@ -35,52 +35,54 @@ export default function Navbar(props) {
 						id="example-navbar-warning"
 					>
 						<ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-							<li className="flex items-center">
-								<Link
-									className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-									to={"/about"}
-									>
-									About
-								</Link>
-							</li>{" "}
-							<li className="flex items-center">
-								<Link
-									className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-									to={"/contact"}
-									>
-									Contact
-								</Link>
-							</li>
+						<li className="flex items-center">
+                                <Link
+                                    className="  px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold hover:text-black"
+                                    to={"/about"}
+                                >
+                                    <i className="lg:!hidden fa-solid fa-house text-lg leading-lg  mr-2 "></i>
+                                    About
+                                </Link>
+                            </li>{" "}
+                            <li className="flex items-center">
+                                <Link
+                                    className="  px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold hover:text-black"
+                                    to={"/contact"}
+                                >
+                                    <i className="lg:!hidden fa-solid fa-id-card text-lg leading-lg  mr-2" />
+                                    Contact
+                                </Link>
+                            </li>
 							<li className="flex items-center">
 								<a
-									className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+									className=" px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
 									href="https://web.facebook.com/Numidia.academy"
 									target="_blank"
 								>
-									<i className="text-blueGray-400 fab fa-facebook text-lg leading-lg " />
+									<i className=" fab fa-facebook text-lg leading-lg " />
 									<span className="lg:hidden inline-block ml-2">
-										Share
+										Like Us on Facebook
 									</span>
 								</a>
 							</li>
 							<li className="flex items-center">
 								<a
-									className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+									className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
 									href="https://www.instagram.com/numidia_school/"
 									target="_blank"
 								>
-									<i className="text-blueGray-400 fab fa-instagram text-lg leading-lg " />
+									<i className="text-slate-400 fab fa-instagram text-lg leading-lg " />
 									<span className="lg:hidden inline-block ml-2">
-										Post
+										Fllow Us On Instagram
 									</span>
 								</a>
 							</li>
 							<li className="flex items-center">
 								<Link
 									className="bg-lightBlue-500  active:bg-lightBlue-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
-									to={"/register"}
+									to={"/login"}
 								>
-									Join Now
+									Login Now
 								</Link>
 							</li>
 						</ul>
