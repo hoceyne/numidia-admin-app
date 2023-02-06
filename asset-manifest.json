@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/numidia-admin-app/static/css/main.eb809a4b.css",
+    "main.js": "/numidia-admin-app/static/js/main.0462d8ca.js",
+    "static/media/profession.jpg": "/numidia-admin-app/static/media/profession.fb58c8f37a24c07f5347.jpg",
+    "static/media/academy.jpg": "/numidia-admin-app/static/media/academy.fb79b25d991a1df5e32c.jpg",
+    "static/media/school.jpg": "/numidia-admin-app/static/media/school.7d04e3c5bc79731a736c.jpg",
+    "static/media/numidia-andriod-app.png": "/numidia-admin-app/static/media/numidia-andriod-app.b7a9328fd75fdb1f7a67.png",
+    "static/media/fa-solid-900.ttf": "/numidia-admin-app/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/fa-brands-400.ttf": "/numidia-admin-app/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/pattern_react.png": "/numidia-admin-app/static/media/pattern_react.01996482038c959aba34.png",
+    "static/media/fa-solid-900.woff2": "/numidia-admin-app/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "/numidia-admin-app/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/register_bg_2.png": "/numidia-admin-app/static/media/register_bg_2.4f2cb0ac523768c8c77b.png",
+    "static/media/fa-regular-400.ttf": "/numidia-admin-app/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/fa-regular-400.woff2": "/numidia-admin-app/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/numidia-school-logo.png": "/numidia-admin-app/static/media/numidia-school-logo.2b5afa34b952f3196f34.png",
+    "static/media/facebook.png": "/numidia-admin-app/static/media/facebook.0fb050b388ab6634e699.png",
+    "static/media/fa-v4compatibility.ttf": "/numidia-admin-app/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/fa-v4compatibility.woff2": "/numidia-admin-app/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
+    "static/media/google.svg": "/numidia-admin-app/static/media/google.952443d790ba00a03a5e2b10397d3acd.svg",
+    "index.html": "/numidia-admin-app/index.html",
+    "main.eb809a4b.css.map": "/numidia-admin-app/static/css/main.eb809a4b.css.map",
+    "main.0462d8ca.js.map": "/numidia-admin-app/static/js/main.0462d8ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb809a4b.css",
+    "static/js/main.0462d8ca.js"
+  ]
+}
