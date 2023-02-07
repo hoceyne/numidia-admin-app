@@ -21,8 +21,9 @@ import Dashboard from "./Views/Dashboard";
 import Users from "./Views/Users/Users";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const app_url = process.env.REACT_APP_URL;
 root.render(
-	<BrowserRouter>
+	<BrowserRouter basename={app_url}>
 		<Routes>
 			<Route path="/about.us" exact element={<AboutUs />} />
 			<Route path="/contact.us" exact element={<ContactUs />} />
