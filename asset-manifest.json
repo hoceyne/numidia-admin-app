@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/numidia-admin-app/static/css/main.eb809a4b.css",
-    "main.js": "/numidia-admin-app/static/js/main.416e4907.js",
+    "main.css": "/numidia-admin-app/static/css/main.f2204c41.css",
+    "main.js": "/numidia-admin-app/static/js/main.3054bccd.js",
     "static/media/profession.jpg": "/numidia-admin-app/static/media/profession.fb58c8f37a24c07f5347.jpg",
     "static/media/academy.jpg": "/numidia-admin-app/static/media/academy.fb79b25d991a1df5e32c.jpg",
     "static/media/school.jpg": "/numidia-admin-app/static/media/school.7d04e3c5bc79731a736c.jpg",
@@ -20,11 +20,11 @@
     "static/media/fa-v4compatibility.woff2": "/numidia-admin-app/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "static/media/google.svg": "/numidia-admin-app/static/media/google.952443d790ba00a03a5e2b10397d3acd.svg",
     "index.html": "/numidia-admin-app/index.html",
-    "main.eb809a4b.css.map": "/numidia-admin-app/static/css/main.eb809a4b.css.map",
-    "main.416e4907.js.map": "/numidia-admin-app/static/js/main.416e4907.js.map"
+    "main.f2204c41.css.map": "/numidia-admin-app/static/css/main.f2204c41.css.map",
+    "main.3054bccd.js.map": "/numidia-admin-app/static/js/main.3054bccd.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb809a4b.css",
-    "static/js/main.416e4907.js"
+    "static/css/main.f2204c41.css",
+    "static/js/main.3054bccd.js"
   ]
 }
