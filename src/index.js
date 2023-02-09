@@ -19,20 +19,27 @@ import AboutUs from "./Views/AboutUs.js";
 import ContactUs from "./Views/ContactUs";
 import Dashboard from "./Views/Dashboard";
 import Users from "./Views/Users/Users";
+import Departements from "./Views/Branches/Departements";
+import Plans from "./Views/Plans/Plans";
+import Logout from "./Views/Auth/Logout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const app_url = process.env.REACT_APP_URL;
 root.render(
 	<BrowserRouter basename={app_url}>
-		<Routes>
+		<Routes >
 			<Route path="/about.us" exact element={<AboutUs />} />
 			<Route path="/contact.us" exact element={<ContactUs />} />
 			<Route path="/profile" exact element={<Profile />} />
 			<Route path="/login" exact element={<Login />} />
+			<Route path="/logout" exact element={<Logout />} />
 			<Route path="/register" exact element={<Register />} />
 			<Route path="/dashboard" exact element={<Dashboard />} />
 			<Route path="/teachers" exact element={<Teachers />} />
 			<Route path="/students" exact element={<Students />} />
+			<Route path="/plans" exact element={<Plans />} />
+			<Route path="/departements" exact element={<Departements />} />
+
 			<Route path="/users" exact element={<Users />} />
 			<Route path="/forgot.password" exact element={<ForgotPassword />} />
 
@@ -44,6 +51,7 @@ root.render(
 			/>
 			<Route path="/email.verify" exact element={<EmailVerification />} />
 			<Route path="/" exact element={<Index />} />
+
 
 			{/* Error pages */}
 			<Route path="/404" exact element={<Error404 />} />
