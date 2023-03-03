@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import CardStats from "../Cards/CardStats.js";
+import CardStats from "./CardStats.js";
+import { useNavigate } from "react-router-dom";
 
 export default function HeaderStats() {
     const [users, setUsers] = React.useState(0);
@@ -12,6 +13,7 @@ export default function HeaderStats() {
     const url = process.env.REACT_APP_API_URL;
     const role = window.sessionStorage.getItem("role");
 
+    const navigate = useNavigate();
 
     const loadStats = () => {
         axios({
@@ -36,12 +38,27 @@ export default function HeaderStats() {
             })
 
             // Catch errors if any
+            
             .catch((error) => {
-                Swal.fire({
-                    title: "Server fall down",
-                    text: "Can't get statistics",
-                    icon: "error",
-                });
+                if (error.response.status === 401) {
+                    Swal.fire({
+                        title: "Please sign in",
+                        text: "You are not signed in",
+                        icon: "error",
+                    }).then(() => {
+                        window.sessionStorage.clear();
+                        navigate("/login");
+                    });
+                } else if (error.response.status === 403) {
+                    console.log(error);
+                    Swal.fire({
+                        title: "Please verify your email",
+                        text: "You are not verified press ok to verify your email",
+                        icon: "error",
+                    }).then(() => {
+                        navigate("/email.verify");
+                    });
+                }
             });
     };
     useEffect(() => {
